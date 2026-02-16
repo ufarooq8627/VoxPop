@@ -22,12 +22,16 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sqlalchemy import create_engine, text
 import warnings
+import os
 
 warnings.filterwarnings("ignore")
 
 # CONFIG & DB CONNECTION
 
-DB_URL = "postgresql+psycopg://postgres:Greybentley%40123@127.0.0.1:5432/voxpop"
+DB_URL = os.environ.get(
+    "VOXPOP_DB_URL",
+    "postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop"
+)
 
 st.set_page_config(
     page_title="VoxPop — Brand Intelligence",

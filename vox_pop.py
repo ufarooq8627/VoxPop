@@ -122,8 +122,10 @@ print(df.isna().sum())
 # %%
 # connecting wil postgres
 
+import os
+
 engine = create_engine(
-    "postgresql+psycopg://postgres:Greybentley%40123@127.0.0.1:5432/voxpop"
+    os.environ.get("VOXPOP_DB_URL", "postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop")
 )
 
 # %%
@@ -601,7 +603,7 @@ clf_model.to(device)
 # from sqlalchemy import create_engine, text
 
 # engine = create_engine(
-#     "postgresql+psycopg://postgres:Greybentley%40123@127.0.0.1:5432/voxpop"
+#     os.environ.get("VOXPOP_DB_URL", "postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop")
 # )
 
 
@@ -654,7 +656,7 @@ ner = hf_pipeline(
 MAX_CHUNK_CHARS = 2500
 
 engine = create_engine(
-    "postgresql+psycopg://postgres:Greybentley%40123@127.0.0.1:5432/voxpop"
+    os.environ.get("VOXPOP_DB_URL", "postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop")
 )
 
 #  Load BART
@@ -1076,7 +1078,7 @@ from datetime import datetime
 MAX_CHUNK_CHARS = 2500
 
 engine = create_engine(
-    "postgresql+psycopg://postgres:Greybentley%40123@127.0.0.1:5432/voxpop"
+    os.environ.get("VOXPOP_DB_URL", "postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop")
 )
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

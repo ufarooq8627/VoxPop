@@ -93,9 +93,13 @@ pip install sqlalchemy psycopg gensim scipy
 ### Database Setup
 
 1. Create a PostgreSQL database named `voxpop`
-2. Update the connection string in `vox_pop.py` and `streamlit_app.py`:
-   ```python
-   DB_URL = "postgresql+psycopg://user:password@127.0.0.1:5432/voxpop"
+2. Set your database connection string as an environment variable:
+   ```bash
+   # Windows (PowerShell)
+   [System.Environment]::SetEnvironmentVariable("VOXPOP_DB_URL", "postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop", "User")
+
+   # Linux / macOS
+   export VOXPOP_DB_URL="postgresql+psycopg://postgres:YOUR_PASSWORD@127.0.0.1:5432/voxpop"
    ```
 3. Run the pipeline to populate tables:
    ```bash
