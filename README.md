@@ -114,6 +114,17 @@ streamlit run streamlit_app.py
 
 ---
 
+## 📸 Screenshots
+
+![Dashboard Overview](screenshots/Front_View.png)
+![Word Clouds](screenshots/Word_Clouds.png)
+![Hypothesis Testing](screenshots/Hypothesis_Testing.png)
+![Cluster Analysis](screenshots/Cluster_Analysis.png)
+![Crisis Reports](screenshots/Crisis_Report.png)
+![Brand Assistant](screenshots/Brand_Assistant.png)
+
+---
+
 ## 📈 Dashboard Sections
 
 The Streamlit dashboard includes:
