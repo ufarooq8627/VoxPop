@@ -167,3 +167,4 @@ This project was developed as part of an AI/ML coursework assignment.
 
 ---
 
+> **Author**: FAROOQUE  
