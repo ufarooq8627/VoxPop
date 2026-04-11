@@ -52,7 +52,6 @@ Final_VoxPop/
 ├── voxpop_main.ipynb           # Jupyter notebook with outputs
 ├── streamlit_app.py            # Interactive dashboard
 ├── Data Ingestor.ipynb         # Dataset download script
-├── draft.ipynb                 # Experimentation notebook
 ├── info.txt                    # Model comparison results
 └── README.md
 ```
